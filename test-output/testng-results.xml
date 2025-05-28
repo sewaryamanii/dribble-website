@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-28T03:23:30 EET" name="Default suite" finished-at="2025-05-28T03:23:43 EET" duration-ms="13118">
+    <groups>
+    </groups>
+    <test started-at="2025-05-28T03:23:30 EET" name="Default test" finished-at="2025-05-28T03:23:43 EET" duration-ms="13118">
+      <class name="DribbleWebsite.DribbleWebsite.AppTest">
+        <test-method is-config="true" signature="projectsetup()[pri:0, instance:DribbleWebsite.DribbleWebsite.AppTest@614df0a4]" started-at="2025-05-28T03:23:30 EET" name="projectsetup" finished-at="2025-05-28T03:23:33 EET" duration-ms="2847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- projectsetup -->
+        <test-method signature="Filters()[pri:2, instance:DribbleWebsite.DribbleWebsite.AppTest@614df0a4]" started-at="2025-05-28T03:23:33 EET" name="Filters" finished-at="2025-05-28T03:23:43 EET" duration-ms="10201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Filters -->
+      </class> <!-- DribbleWebsite.DribbleWebsite.AppTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
