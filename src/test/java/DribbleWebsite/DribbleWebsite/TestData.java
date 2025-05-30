@@ -16,5 +16,11 @@ String [] randomID = {"1","2","3","4"};
 	
 	String[] options = { "week", "month","year","ever","now" };
 	int randomoptions = rand.nextInt(options.length);
+	
+	
+	
+	String [] popularbutton = {"Popular","New & Noteworthy"};
+	int randomselect = rand.nextInt(popularbutton.length);
+	
 
 }

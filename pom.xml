@@ -26,6 +26,12 @@
     <artifactId>selenium-java</artifactId>
     <version>4.31.0</version>
 </dependency>
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version> <!-- Use latest version -->
+</dependency>
+
   <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
