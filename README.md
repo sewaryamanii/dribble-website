@@ -17,7 +17,10 @@ Apache Commons IO (for file handling & screenshots)
 JDBC (for database connectivity)
 
 🚀 Features / Test Cases
+
+
 SignUp
+
 Automates user sign-up using data fetched from the MySQL database.
 
 Filters
