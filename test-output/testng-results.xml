@@ -2,19 +2,19 @@
 <testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-30T03:08:12 EET" name="Default suite" finished-at="2025-05-30T03:08:21 EET" duration-ms="8909">
+  <suite started-at="2025-06-21T02:06:13 EET" name="Default suite" finished-at="2025-06-21T02:06:23 EET" duration-ms="10471">
     <groups>
     </groups>
-    <test started-at="2025-05-30T03:08:12 EET" name="Default test" finished-at="2025-05-30T03:08:21 EET" duration-ms="8909">
+    <test started-at="2025-06-21T02:06:13 EET" name="Default test" finished-at="2025-06-21T02:06:23 EET" duration-ms="10471">
       <class name="DribbleWebsite.DribbleWebsite.AppTest">
-        <test-method is-config="true" signature="projectsetup()[pri:0, instance:DribbleWebsite.DribbleWebsite.AppTest@5ef6ae06]" started-at="2025-05-30T03:08:12 EET" name="projectsetup" finished-at="2025-05-30T03:08:15 EET" duration-ms="3272" status="PASS">
+        <test-method is-config="true" signature="projectsetup()[pri:0, instance:DribbleWebsite.DribbleWebsite.AppTest@55dfebeb]" started-at="2025-06-21T02:06:13 EET" name="projectsetup" finished-at="2025-06-21T02:06:15 EET" duration-ms="2930" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- projectsetup -->
-        <test-method signature="PopularButton()[pri:7, instance:DribbleWebsite.DribbleWebsite.AppTest@5ef6ae06]" started-at="2025-05-30T03:08:15 EET" name="PopularButton" finished-at="2025-05-30T03:08:21 EET" duration-ms="5555" status="PASS">
+        <test-method signature="Support()[pri:10, instance:DribbleWebsite.DribbleWebsite.AppTest@55dfebeb]" started-at="2025-06-21T02:06:16 EET" name="Support" finished-at="2025-06-21T02:06:23 EET" duration-ms="7462" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PopularButton -->
+        </test-method> <!-- Support -->
       </class> <!-- DribbleWebsite.DribbleWebsite.AppTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
