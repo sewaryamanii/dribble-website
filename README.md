@@ -19,42 +19,42 @@ JDBC (for database connectivity)
 🚀 Features / Test Cases
 
 
-SignUp
+--SignUp
 
 Automates user sign-up using data fetched from the MySQL database.
 
-Filters
+--Filters
 
 Applies random color filters and dropdown filters to browse shots.
 
-TypeInSearch
+--TypeInSearch
 
 Performs search actions with terms using the Dribbble search bar.
 
-TypeInSearchGibberish
+--TypeInSearchGibberish
 
 Tests search with gibberish text to validate no-results handling and takes a screenshot.
 
-PopularButton
+--PopularButton
 
 Selects popular filters from the dropdown menu and verifies functionality.
 
-LoginN
+--LoginN
 
 Automates the login process using email or username.
 
-SaveElementWithoutLogIn
+--SaveElementWithoutLogIn
 
 Attempts to save a shot without logging in and captures a screenshot of the result.
 
-socialmedealiks
+--socialmedealiks
 
 Clicks on a social media icon (Pinterest) and takes a screenshot of the opened page.
 
-TapOnRandomBlog
+--TapOnRandomBlog
 
 Navigates to the blog section and clicks on a random blog post.
 
-Support
+--Support
 
 Searches for a support article on Dribbble, opens it, scrolls, and captures a screenshot.
