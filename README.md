@@ -1,42 +1,38 @@
-This project automates several test cases on the [Dribbble](https://dribbble.com) website using Selenium WebDriver, TestNG, and Java. It also integrates with a MySQL database to fetch dynamic test data such as user credentials and color filters.
----
-## 🔧 Technologies Used
-- Java
-- Selenium WebDriver
-- TestNG
-- MySQL (JDBC)
-- Apache Commons IO (for screenshot handling)
-- Maven (project structure)
-- ChromeDriver
----
-## 🧪 Test Cases Overview
+📌 Overview
+This project automates test scenarios for the Dribbble website using Selenium WebDriver, TestNG, and Java. The automation includes user actions like sign-up, login, search, applying filters, interacting with blogs, social media links, and support pages.
 
-- **SignUp**  
-  Automates user registration using random user data fetched from a MySQL database.
+⚙ Technologies Used
+Java
 
-- **Filtersinlogoutmode**  
-  Applies a color filter on the homepage while logged out, then takes a screenshot of the results.
+Selenium WebDriver
 
-- **TimeframeFilter**  
-  Selects a random timeframe filter from a dropdown menu (e.g., Past Week, Past Month).
+TestNG
 
-- **TypeInSearch**  
-  Tests search functionality by entering valid keywords and then clearing/changing the input.
+MySQL (for user & color data)
 
-- **TypeInSearchGibberish**  
-  Enters gibberish in the search bar to trigger a "No results found" message, then captures a screenshot.
+Maven
 
-- **FiltersBar**  
-  Navigates through filter bar arrows to explore additional filter options.
+Apache Commons IO (for file handling & screenshots)
 
-- **PopularButton**  
-  Randomly selects either "Popular" or "New & Noteworthy" from a dropdown filter and applies it.
+JDBC (for database connectivity)
 
-- **LoginP**  
-  Logs in with hardcoded user credentials and takes a screenshot after successful login.
+🗂 Project Structure
+bash
+Copy code
+DribbleWebsite.DribbleWebsite
+├── AppTest.java          # Main test class containing test cases
+├── TestData.java         # Contains test data, helpers (not shown here)
+└── src/test/ScreenShot/  # Directory where screenshots are saved
+🚀 Features / Test Cases
+Test Name	Description
+SignUp	Automates user sign-up with data fetched from MySQL DB.
+Filters	Applies random color filters and dropdown filters on shots.
+TypeInSearch	Searches for terms using the Dribbble search bar.
+TypeInSearchGibberish	Searches gibberish to test no-results scenarios & screenshots.
+PopularButton	Selects popular filters from dropdown.
+LoginN	Automates login using email/username.
+SaveElementWithoutLogIn	Attempts to save a shot without logging in, captures screenshot.
+socialmedealiks	Clicks social media icon (Pinterest) and takes screenshot.
+TapOnRandomBlog	Navigates and clicks a random blog post.
+Support	Searches and opens an article in Dribbble support, screenshots.
 
-- **LoginN**  
-  Logs in using a randomly selected user from the database (no password verification).
-
-- **Filtersinloginmode**  
-  Performs a search and applies filters while logged in, followed by a screenshot capture.
