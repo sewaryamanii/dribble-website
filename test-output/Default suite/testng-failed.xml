@@ -6,7 +6,7 @@
       <class name="DribbleWebsite.DribbleWebsite.AppTest">
         <methods>
           <include name="projectsetup"/>
-          <include name="Support"/>
+          <include name="SaveElementWithoutLogIn"/>
         </methods>
       </class> <!-- DribbleWebsite.DribbleWebsite.AppTest -->
     </classes>

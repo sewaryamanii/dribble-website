@@ -14,7 +14,7 @@ String [] randomID = {"1","2","3","4"};
 	int randomhex = rand.nextInt(colors.length);
 	String randomcolor = colors[randomhex];
 	
-	String[] options = { "week", "month","year","ever","now" };
+	String[] options = { "This Past Week", "This Past Month","This Past Year","All Time" };
 	int randomoptions = rand.nextInt(options.length);
 	
 	
