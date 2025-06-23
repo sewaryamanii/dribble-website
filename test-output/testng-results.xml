@@ -2,19 +2,23 @@
 <testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-23T15:33:00 EET" name="Default suite" finished-at="2025-06-23T15:33:14 EET" duration-ms="13567">
+  <suite started-at="2025-06-23T18:36:30 EET" name="Default suite" finished-at="2025-06-23T18:36:43 EET" duration-ms="12698">
     <groups>
     </groups>
-    <test started-at="2025-06-23T15:33:00 EET" name="Default test" finished-at="2025-06-23T15:33:14 EET" duration-ms="13567">
+    <test started-at="2025-06-23T18:36:30 EET" name="Default test" finished-at="2025-06-23T18:36:43 EET" duration-ms="12698">
       <class name="DribbleWebsite.DribbleWebsite.AppTest">
-        <test-method is-config="true" signature="projectsetup()[pri:0, instance:DribbleWebsite.DribbleWebsite.AppTest@5ef6ae06]" started-at="2025-06-23T15:33:00 EET" name="projectsetup" finished-at="2025-06-23T15:33:03 EET" duration-ms="2535" status="PASS">
+        <test-method is-config="true" signature="projectsetup()[pri:0, instance:DribbleWebsite.DribbleWebsite.AppTest@44ebcd03]" started-at="2025-06-23T18:36:30 EET" name="projectsetup" finished-at="2025-06-23T18:36:36 EET" duration-ms="5459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- projectsetup -->
-        <test-method signature="FooterLinks()[pri:11, instance:DribbleWebsite.DribbleWebsite.AppTest@5ef6ae06]" started-at="2025-06-23T15:33:03 EET" name="FooterLinks" finished-at="2025-06-23T15:33:14 EET" duration-ms="10971" status="PASS">
+        <test-method signature="Tags()[pri:5, instance:DribbleWebsite.DribbleWebsite.AppTest@44ebcd03]" started-at="2025-06-23T18:36:36 EET" name="Tags" finished-at="2025-06-23T18:36:43 EET" duration-ms="7013" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FooterLinks -->
+        </test-method> <!-- Tags -->
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:DribbleWebsite.DribbleWebsite.AppTest@44ebcd03]" started-at="2025-06-23T18:36:43 EET" name="aftertest" finished-at="2025-06-23T18:36:43 EET" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
       </class> <!-- DribbleWebsite.DribbleWebsite.AppTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

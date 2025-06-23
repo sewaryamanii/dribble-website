@@ -20,6 +20,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import java.io.File; // For File
@@ -28,8 +30,8 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils; // For FileUtils
 
 public class AppTest extends TestData {
-
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver  ;
+	JavascriptExecutor js;
 
 	Connection con;
 	Statement stmt;
@@ -41,10 +43,11 @@ public class AppTest extends TestData {
 	String Password;
 	String ColorCode;
 	String mydate = new Date().toString().replace(":", "-");
-	JavascriptExecutor js = (JavascriptExecutor) driver;
 
-	@BeforeTest
+	@BeforeMethod
 	public void projectsetup() throws SQLException {
+		 driver = new ChromeDriver();
+		 js = (JavascriptExecutor) driver;
 
 		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalproject", "root", "1234");
 
@@ -88,7 +91,7 @@ public class AppTest extends TestData {
 //
 //	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 1, enabled = false)
 // we have to scroll so that we can click on filters button since the test can't reach it if we don't 
 	public void Filters() throws InterruptedException, SQLException, IOException {
 		js.executeScript("window.scrollTo(0,400)");
@@ -128,7 +131,7 @@ js.executeScript("window.scrollTo(0,500)");
 
 
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 2, enabled = false)
 	public void TypeInSearch() throws InterruptedException {
 		WebElement searchbar = driver.findElement(By.id("autocomplete-1-input"));
 		Thread.sleep(3000);
@@ -139,7 +142,7 @@ js.executeScript("window.scrollTo(0,500)");
 
 	}
 
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 3, enabled = false)
 	public void TypeInSearchGibberish() throws InterruptedException, IOException {
 		WebElement searchbar2 = driver.findElement(By.id("autocomplete-1-input"));
 		searchbar2.click();
@@ -168,7 +171,7 @@ js.executeScript("window.scrollTo(0,500)");
 
 
 
-	@Test(priority = 5, enabled = false)
+	@Test(priority = 4, enabled = false)
 	public void PopularButton() throws InterruptedException {
 		js.executeScript("window.scrollTo(0,400)");
 
@@ -186,20 +189,24 @@ js.executeScript("window.scrollTo(0,500)");
 
 
 
-	@Test(priority = 6, enabled = false)
-	public void Login() throws InterruptedException {
-		driver.findElement(By.cssSelector(".site-nav__login.btn2.btn2--medium")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.cssSelector("input[placeholder='Enter email or username']"))
-				.sendKeys("sewar.alyamani@gmail.com");
-		Thread.sleep(1000);
-		driver.findElement(By.xpath(
-				"//form[@action='/session/send_email_otp']//button[@type='submit'][normalize-space()='Continue']"))
-				.click();
+	@Test(priority = 5, enabled = true)
+	public void Tags() throws InterruptedException, IOException {
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+driver.findElement(By.cssSelector("button[aria-label='close']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Tags']")).click();
+		js.executeScript("window.scrollTo(0,250)");
 
+driver.findElement(By.xpath("//img[@alt='UI']")).click();
+
+
+TakesScreenshot scrShot = ((TakesScreenshot) driver);
+File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
+
+File DestFile = new File("src/test/ScreenShot/" + mydate + ".jpg");
+FileUtils.copyFile(SrcFile, DestFile);
 	}
 
-	@Test(priority = 7, enabled = false)
+	@Test(priority = 6, enabled = false)
 	public void SaveElementWithoutLogIn() throws InterruptedException, IOException {
 		driver.findElement(By.cssSelector(".shot-thumbnail-link.dribbble-link.js-shot-link")).click();
 		Thread.sleep(1500);
@@ -213,7 +220,7 @@ js.executeScript("window.scrollTo(0,500)");
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
 
-	@Test(priority = 8, enabled = false)
+	@Test(priority = 7, enabled = false)
 	public void socialmedialinks() throws InterruptedException, IOException {
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 		Thread.sleep(1000);
@@ -228,7 +235,7 @@ js.executeScript("window.scrollTo(0,500)");
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
 
-	@Test(priority = 9, enabled = false)
+	@Test(priority = 8, enabled = false)
 	public void TapOnRandomBlog() throws InterruptedException {
 
 		driver.findElement(By.cssSelector("button[aria-label='Toggle mobile menu']")).click();
@@ -242,7 +249,7 @@ js.executeScript("window.scrollTo(0,500)");
 
 	}
 
-	@Test(priority = 10, enabled = false)
+	@Test(priority = 9, enabled = false)
 	public void Support () throws InterruptedException, IOException {
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 
@@ -263,7 +270,7 @@ js.executeScript("window.scrollTo(0,500)");
 	
 	}
 	
-	@Test (priority = 11 , enabled = true)
+	@Test (priority = 10 , enabled = false)
 	public void FooterLinks () throws IOException, InterruptedException {
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 driver.findElement(By.xpath("//a[normalize-space()='For designers']")).click();
@@ -293,5 +300,9 @@ File DestFile2 = new File("src/test/ScreenShot/" + mydate + ".jpg");
 FileUtils.copyFile(SrcFile2, DestFile2);
 		
 	}
-	
+	@AfterMethod 
+	public void aftertest () {
+		
+		driver.close();
+	}
 }

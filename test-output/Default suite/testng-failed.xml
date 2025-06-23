@@ -5,8 +5,16 @@
     <classes>
       <class name="DribbleWebsite.DribbleWebsite.AppTest">
         <methods>
+          <include name="TypeInSearch"/>
           <include name="projectsetup"/>
-          <include name="SaveElementWithoutLogIn"/>
+          <include name="aftertest"/>
+          <include name="TapOnRandomBlog"/>
+          <include name="Support"/>
+          <include name="TypeInSearchGibberish"/>
+          <include name="Filters"/>
+          <include name="Tags"/>
+          <include name="FooterLinks"/>
+          <include name="socialmedialinks"/>
         </methods>
       </class> <!-- DribbleWebsite.DribbleWebsite.AppTest -->
     </classes>
